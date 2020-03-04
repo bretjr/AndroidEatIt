@@ -1,0 +1,34 @@
+<resources>
+
+    <string name="app_name">AndroidEatIt</string>
+    <string name="slogan">
+        No matter where you are: whether you are at home, or in the office, or at the beach - we will find you and we will feed you.</string>
+    <string name="phone_number_hint">Phone Number</string>
+    <string name="number_placeholder">0988123344</string>
+    <string name="password_hint">Password</string>
+    <string name="password_placeholder">1234</string>
+    <string name="name_hint">Name</string>
+    <string name="name_placeholder">Joe Smith</string>
+    <string name="new_number_placeholder">0988123388</string>
+    <string name="sign_up_btn">Sign Up</string>
+    <string name="sign_in_btn">Sign In</string>
+    <string name="eat_it_logo_desc">Eat It Logo</string>
+    <string name="title_activity_home">Home</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="home_second">Home Second</string>
+    <string name="cart">Cart</string>
+    <string name="orders">Orders</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="name_of_menu">Name of Menu</string>
+
+</resources>
