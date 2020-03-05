@@ -35,7 +35,7 @@ public class Home extends AppCompatActivity {
 
     TextView txtFullName;
 
-    RecyclerView recycler_menu;
+    RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
 
     private AppBarConfiguration mAppBarConfiguration;
@@ -78,10 +78,10 @@ public class Home extends AppCompatActivity {
         txtFullName.setText(Common.currentUser.getName());
 
         // Load menu
-        recycler_menu = findViewById(R.id.recycler_menu);
-        recycler_menu.setHasFixedSize(true);
+        recyclerView = findViewById(R.id.recycler_menu);
+        recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
-        recycler_menu.setLayoutManager(layoutManager);
+        recyclerView.setLayoutManager(layoutManager);
 
         loadMenu();
     }
@@ -102,7 +102,7 @@ public class Home extends AppCompatActivity {
                 });
             }
         };
-        recycler_menu.setAdapter(adapter);
+        recyclerView.setAdapter(adapter);
     }
 
     @Override
