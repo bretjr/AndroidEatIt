@@ -1,5 +1,6 @@
 package com.example.androideatit;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -37,6 +38,8 @@ public class Home extends AppCompatActivity {
 
     RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
+
+    FirebaseRecyclerAdapter<Category, MenuViewHolder> adapter;
 
     private AppBarConfiguration mAppBarConfiguration;
 
@@ -87,7 +90,7 @@ public class Home extends AppCompatActivity {
     }
 
     private void loadMenu() {
-        FirebaseRecyclerAdapter<Category, MenuViewHolder> adapter = new FirebaseRecyclerAdapter<Category,
+        adapter = new FirebaseRecyclerAdapter<Category,
                 MenuViewHolder>(Category.class, R.layout.menu_item, MenuViewHolder.class, category) {
             @Override
             protected void populateViewHolder(MenuViewHolder viewHolder, Category model, int position) {
@@ -98,6 +101,9 @@ public class Home extends AppCompatActivity {
                     @Override
                     public void onClick(View view, int position, boolean isLongClicked) {
                         Toast.makeText(Home.this, ""+clickItem.getName(), Toast.LENGTH_SHORT).show();
+                        Intent foodList = new Intent(Home.this, FoodList.class);
+                        foodList.putExtra("CategoryId", adapter.getRef(position).getKey());
+                        startActivity(foodList);
                     }
                 });
             }
