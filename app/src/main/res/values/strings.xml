@@ -31,5 +31,10 @@
     <string name="sign_out">Sign Out</string>
     <string name="name_of_menu">Name of Menu</string>
     <string name="name_of_food">Name of Food</string>
+    <string name="food_name">Food Name</string>
+    <string name="price_holder">1,000</string>
+    <string name="description">Description</string>
+    <string name="total_text">Total:</string>
+    <string name="place_order_text">Place Order</string>
 
 </resources>
