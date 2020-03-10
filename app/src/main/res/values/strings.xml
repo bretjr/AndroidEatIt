@@ -37,5 +37,9 @@
     <string name="total_text">Total:</string>
     <string name="place_order_text">Place Order</string>
     <string name="food_item_text">Food 01</string>
+    <string name="order_id_placeholder">#11111111</string>
+    <string name="status">Status</string>
+    <string name="order_phone_placeholder">12345678</string>
+    <string name="address_placeholder">Address</string>
 
 </resources>

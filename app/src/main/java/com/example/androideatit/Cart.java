@@ -57,7 +57,7 @@ public class Cart extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        
+
         totalText = findViewById(R.id.total);
 
         // Button setup
@@ -69,7 +69,7 @@ public class Cart extends AppCompatActivity {
                 showAlertDialog();
             }
         });
-        
+
         loadListFood();
     }
 
@@ -133,8 +133,8 @@ public class Cart extends AppCompatActivity {
 
         //calculate total price
         int total = 0;
-        for (Order order:cart)
-            total+= (Integer.parseInt(order.getPrice()))*(Integer.parseInt(order.getQuantity()));
+        for (Order order : cart)
+            total += (Integer.parseInt(order.getPrice())) * (Integer.parseInt(order.getQuantity()));
         Locale locale = new Locale("en", "US");
         Format format = NumberFormat.getCurrencyInstance(locale);
 

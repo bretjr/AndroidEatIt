@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Request {
 
-    private String phone, name, address, total;
+    private String phone, name, address, total, status;
     private List<Order> foods; //list of foods ordered
 
     public Request() {
@@ -16,6 +16,7 @@ public class Request {
         this.address = address;
         this.total = total;
         this.foods = foods;
+        this.status = "0"; // default is 0, 0: placed, 1: shipping, 2: shipped
     }
 
     public String getPhone() {
@@ -56,5 +57,13 @@ public class Request {
 
     public void setFoods(List<Order> foods) {
         this.foods = foods;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

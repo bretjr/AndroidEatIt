@@ -3,12 +3,15 @@ package com.example.androideatit;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -43,7 +46,7 @@ public class Home extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
@@ -62,7 +65,7 @@ public class Home extends AppCompatActivity {
                 startActivity(cartIntent);
             }
         });
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        final DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -73,6 +76,34 @@ public class Home extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch (item.getItemId()) {
+
+                    case R.id.nav_cart:
+                        Intent cartIntent = new Intent(Home.this, Cart.class);
+                        startActivity(cartIntent);
+                        break;
+                    case R.id.nav_orders:
+                        Intent orderIntent = new Intent(Home.this, OrderStatus.class);
+                        startActivity(orderIntent);
+                        break;
+                    case R.id.nav_log_out:
+                        Intent signInIntent = new Intent(Home.this, SignIn.class);
+                        signInIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        startActivity(signInIntent);
+                        break;
+                    default:
+                        break;
+                }
+
+                drawer.closeDrawer(GravityCompat.START);
+                return true;
+            }
+        });
 
         // Set name for user
         View headerView = navigationView.getHeaderView(0);
@@ -123,4 +154,5 @@ public class Home extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
 }
