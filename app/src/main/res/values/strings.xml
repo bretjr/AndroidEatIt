@@ -36,5 +36,6 @@
     <string name="description">Description</string>
     <string name="total_text">Total:</string>
     <string name="place_order_text">Place Order</string>
+    <string name="food_item_text">Food 01</string>
 
 </resources>
