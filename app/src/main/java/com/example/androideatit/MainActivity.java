@@ -21,9 +21,6 @@ public class MainActivity extends AppCompatActivity {
         btnSignUp = findViewById(R.id.btnSignUp);
         btnSignIn = findViewById(R.id.btnSignIn);
 
-        // Add if it matters toward the end
-        // txtSlogan = findViewById(R.id.txtSlogan);
-
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

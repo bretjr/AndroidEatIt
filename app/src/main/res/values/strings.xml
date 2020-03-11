@@ -4,7 +4,7 @@
     <string name="slogan">
         No matter where you are: whether you are at home, or in the office, or at the beach - we will find you and we will feed you.</string>
     <string name="phone_number_hint">Phone Number</string>
-    <string name="number_placeholder">0988123344</string>
+    <string name="number_placeholder">0988123301</string>
     <string name="password_hint">Password</string>
     <string name="password_placeholder">1234</string>
     <string name="name_hint">Name</string>
@@ -30,5 +30,16 @@
     <string name="orders">Orders</string>
     <string name="sign_out">Sign Out</string>
     <string name="name_of_menu">Name of Menu</string>
+    <string name="name_of_food">Name of Food</string>
+    <string name="food_name">Food Name</string>
+    <string name="price_holder">1,000</string>
+    <string name="description">Description</string>
+    <string name="total_text">Total:</string>
+    <string name="place_order_text">Place Order</string>
+    <string name="food_item_text">Food 01</string>
+    <string name="order_id_placeholder">#11111111</string>
+    <string name="status">Status</string>
+    <string name="order_phone_placeholder">12345678</string>
+    <string name="address_placeholder">Address</string>
 
 </resources>
